@@ -1,0 +1,235 @@
+@import "./variables";
+@import "./utilities";
+
+// General Styles
+
+* {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  text-decoration: none;
+}
+
+body {
+  font-family: "Roboto";
+}
+
+#navbar {
+  display: flex;
+  position: sticky;
+  top: 0;
+  background: $medium-color;
+  color: #fff;
+  justify-content: space-between;
+  z-index: 1;
+  padding: 16px 32px;
+  font-size: 14px;
+  overflow: auto;
+  .left {
+    input {
+      font-size: inherit;
+      color: inherit;
+      background: none;
+      border: 0;
+      box-shadow: none;
+      border-radius: 6px;
+      border: 1px solid white;
+      margin-left: 1rem;
+      outline: none;
+      padding: 0.5rem;
+    }
+    ul {
+      display: flex;
+      align-items: center;
+      list-style: none;
+      li a {
+        color: #fff;
+        padding: 0.75rem;
+      }
+    }
+    i {
+      color: white;
+      font-size: 32px;
+    }
+  }
+  .right {
+    justify-content: center;
+    align-items: center;
+    img {
+      width: 20px;
+      height: 20px;
+      border-radius: 50%;
+      object-fit: contain;
+    }
+    li {
+      color: #fff;
+      margin-left: 1rem;
+      &:last-of-type {
+        display: flex;
+        align-items: center;
+        // justify-content: center;
+      }
+    }
+    i {
+      font-size: 14px;
+    }
+  }
+}
+#sub-nav {
+  border-bottom: 1px solid #ebedef;
+  // height: 49px;
+  margin-top: 26px;
+  display: flex;
+  align-items: center;
+  padding-left: 285px;
+  padding-bottom: 3px;
+  ul {
+    display: flex;
+    align-items: center;
+    list-style: none;
+    li a {
+      color: $medium-color;
+      padding: 8px 16px;
+      font-size: 16px;
+      line-height: 30px;
+      text-align: center;
+      white-space: nowrap;
+      background-color: initial;
+      border: 0;
+      border-bottom: 2px solid transparent;
+    }
+  }
+  .active {
+    font-weight: 600;
+    border-bottom-color: #f9826c;
+    outline: 1px dotted transparent;
+    outline-offset: -1px;
+  }
+}
+.main-content {
+  padding: 0 32px;
+  // display: flex;
+  display: grid;
+  grid-template-columns: 312px auto;
+  aside {
+    margin-top: -10px;
+    img {
+      border-radius: 50%;
+      width: 260px;
+    }
+    h1 {
+      font-size: 26px;
+      line-height: 1.25;
+      margin-top: 5px;
+    }
+    h4 {
+      font-size: 20px;
+      font-style: normal;
+      font-weight: 300;
+      line-height: 24px;
+      color: #586069;
+    }
+    p {
+      font-size: 16px;
+      margin-top: 10px;
+    }
+  }
+  .repo-holder {
+    .input-holder {
+      border-top: 1px solid #e1e4e8;
+      margin-top: 1.5rem;
+      padding-top: 2rem;
+      p {
+        display: inline-block;
+        border-bottom: 1px solid #e1e4e8;
+        padding-bottom: 1rem;
+      }
+    }
+    input {
+      width: 100%;
+      // margin: 1rem 0;
+      margin-top: 2rem;
+      padding: 5px 12px;
+      font-size: 14px;
+      line-height: 20px;
+      // color: var(--color-text-primary);
+      vertical-align: middle;
+      // background-color: var(--color-input-bg);
+      border: 1px solid #e1e4e8;
+      border-radius: 6px;
+      outline: none;
+      box-shadow: rgba(225, 228, 232, 0.2) 0px 1px 0px 0px inset;
+      &:focus {
+        border-color: #0366d6;
+        outline: none;
+        box-shadow: rgba(3, 102, 214, 0.3) 0px 0px 0px 3px;
+      }
+    }
+
+    .repo-list {
+      .repo {
+        margin-top: 2rem;
+        display: flex;
+        justify-content: space-between;
+        padding-bottom: 1.5rem;
+        border-bottom: 1px solid #e1e4e8;
+        .content {
+          h2 {
+            font-size: 20px;
+            color: #0366d6;
+            margin-bottom: 1rem;
+          }
+          p {
+            color: $dark-color;
+            font-size: 14px;
+          }
+          ul {
+            margin-top: 1rem;
+            font-size: 12px;
+            display: flex;
+            align-items: center;
+            li {
+              margin-right: 1rem;
+              color: #586069;
+            }
+          }
+          .repo-lang {
+            position: relative;
+            top: 1px;
+            display: inline-block;
+            width: 12px;
+            height: 12px;
+            border: 1px solid rgba(27, 31, 35, 0.1);
+            border-radius: 50%;
+            background-color: #f1e05a;
+          }
+        }
+      }
+    }
+  }
+  button {
+    height: fit-content;
+  }
+}
+.btn2 {
+  display: inline-block;
+  padding: 5px 16px;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 20px;
+  white-space: nowrap;
+  vertical-align: middle;
+  cursor: pointer;
+  border: 1px solid;
+  border-radius: 6px;
+
+  color: $medium-color;
+  background-color: #fafbfc;
+  border-color: rgba(27, 31, 35, 0.15);
+
+  box-shadow: rgba(27, 31, 35, 0.04) 0px 1px 0px 0px,
+    rgba(255, 255, 255, 0.25) 0px 1px 0px 0px inset;
+  transition: 0.2s cubic-bezier(0.3, 0, 0.5, 1);
+  transition-property: color, background-color, border-color;
+}
+@import "./media";

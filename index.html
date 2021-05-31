@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- custom fonts -->
+    <link rel="stylesheet" href="style/fonts.css" />
+    <!-- Font awesome -->
+    <link rel="stylesheet" href="style/all.min.css" />
+    <!-- main stylesheet -->
+    <link rel="stylesheet" href="style/main.css" />
+    <title>Github</title>
+  </head>
+  <body>
+    <nav id="navbar">
+      <div class="left flex">
+        <i class="fab fa-github"></i>
+        <form id="user-search">
+          <input type="text" id="search" name="search" placeholder="Search..." autocomplete="off" />
+        </form>
+        <ul>
+          <li><a href="#"> Pull requests</a></li>
+          <li><a href="#">Issues</a></li>
+          <li><a href="#">Codespaces</a></li>
+          <li><a href="#">Marketplace</a></li>
+          <li><a href="#">Explore</a></li>
+        </ul>
+      </div>
+      <div class="right flex">
+        <ul class="flex">
+          <li><i class="far fa-bell"></i> </li>
+          <li><i class="fas fa-plus"></i> <i class="fas fa-caret-down"></i></li>
+          <li><img id="user-avatar-small" src="https://i.stack.imgur.com/l60Hf.png" alt="user avatar" />
+            <i class="fas fa-caret-down"></i>
+          </ul>
+      </div>
+    </nav>
+    <main>
+      <nav id="sub-nav">
+        <ul>
+          <li><a href="#"> 
+            Overview</a></li>
+          <li><a href="#" class="active">Repositories</a></li>
+          <li><a href="#">Projects</a></li>
+          <li><a href="#">Packages</a></li>
+        </ul>
+      </nav>
+      <div class="main-content">
+        <aside>
+          <img id="user-avatar" src="https://i.stack.imgur.com/l60Hf.png" alt="git avatar" >
+          <h1 id="user-name"></h1>
+          <!-- <h4>ekediala</h4> -->
+          <!-- <button class="btn2 btn-block">Follow</button> -->
+          <!-- <p>
+            Frontend Developer and User Interface Designer
+          </p> -->
+        </aside>
+        <div class="repo-holder">
+          <input type="text" placeholder="Find a repository">
+          <div class="input-holder">
+
+            <p><strong> 20</strong> results for <strong> public</strong> repositories</p>
+          </div>
+
+        <div class="repo-list">
+      
+          </div>
+        </div>
+        </div>
+      </div>
+    </main>
+    <script src="/js/graphqlSetup.js"></script>
+  </body>
+</html>

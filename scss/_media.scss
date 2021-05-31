@@ -1,0 +1,19 @@
+// Widescreens
+@include mediaXl {
+  // Classname goes here
+}
+
+// Desktops & Laptops
+@include mediaLg {
+  // Classname goes here
+}
+
+// Tablets & Small Laptops
+@include mediaMd {
+  // Classname goes here
+}
+
+// Smartphones
+@include mediaSm {
+  // Classname goes here
+}
